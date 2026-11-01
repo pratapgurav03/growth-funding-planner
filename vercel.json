@@ -1,9 +1,21 @@
 {
   "outputDirectory": "public",
   "functions": {
-    "api/*.js": { "maxDuration": 30, "includeFiles": "{src/planner/**,data/snapshot.json}" }
+    "api/*.js": {
+      "maxDuration": 30,
+      "includeFiles": "{src/planner/**,data/snapshot.json}"
+    }
   },
   "headers": [
-    { "source": "/(.*)", "headers": [{ "key": "X-Content-Type-Options", "value": "nosniff" }] }
-  ]
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ],
+  "framework": null
 }
