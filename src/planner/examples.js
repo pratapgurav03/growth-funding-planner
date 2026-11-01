@@ -1,0 +1,65 @@
+// Example data. Example Co. is invented. The other three are the book's own cases (ch.4),
+// included so the page can be checked against the textbook.
+
+export const EXAMPLES = [
+  {
+    id: 'exco',
+    name: 'Example Co. (invented, 4 years)',
+    note: 'Invented numbers, in $ thousands. Four years of history, so the trend forecast works. Receivables are slowing and margin is slipping on purpose, to show the insights.',
+    units: 'thousands',
+    plan: { mode: 'trend', method: 'cagr' },
+    years: [
+      { label: '2021', sales: 8200, cogs: 5084, opex: 1640, depreciation: 320, interest: 120, taxes: 259, dividends: 233,
+        cash: 1520, receivables: 1010, inventory: 770, otherCurrentAssets: 150, netFixedAssets: 3300, otherNonCurrentAssets: 600,
+        payables: 600, otherCurrentLiabilities: 250, notesPayable: 300, longTermDebt: 2000, otherLongTermLiabilities: 0,
+        commonStock: 1200, retainedEarnings: 3000, otherEquity: 0 },
+      { label: '2022', sales: 9100, cogs: 5660, opex: 1820, depreciation: 350, interest: 125, taxes: 286, dividends: 258,
+        cash: 1591, receivables: 1120, inventory: 860, otherCurrentAssets: 160, netFixedAssets: 3700, otherNonCurrentAssets: 600,
+        payables: 655, otherCurrentLiabilities: 275, notesPayable: 300, longTermDebt: 2000, otherLongTermLiabilities: 0,
+        commonStock: 1200, retainedEarnings: 3601, otherEquity: 0 },
+      { label: '2023', sales: 10150, cogs: 6354, opex: 2030, depreciation: 390, interest: 130, taxes: 311, dividends: 280,
+        cash: 1691, receivables: 1300, inventory: 980, otherCurrentAssets: 180, netFixedAssets: 4200, otherNonCurrentAssets: 600,
+        payables: 740, otherCurrentLiabilities: 305, notesPayable: 350, longTermDebt: 2100, otherLongTermLiabilities: 0,
+        commonStock: 1200, retainedEarnings: 4256, otherEquity: 0 },
+      { label: '2024', sales: 11300, cogs: 7142, opex: 2260, depreciation: 430, interest: 140, taxes: 332, dividends: 299,
+        cash: 1853, receivables: 1520, inventory: 1150, otherCurrentAssets: 200, netFixedAssets: 4700, otherNonCurrentAssets: 600,
+        payables: 830, otherCurrentLiabilities: 340, notesPayable: 400, longTermDebt: 2300, otherLongTermLiabilities: 0,
+        commonStock: 1200, retainedEarnings: 4953, otherEquity: 0 },
+    ],
+  },
+  {
+    id: 'sands',
+    name: 'S&S Air (book minicase, ch.4)',
+    note: 'From the chapter 4 minicase, whole dollars. Questions: internal and sustainable growth; EFN at 12% growth at full capacity; then EFN if a $5,000,000 production line must be added (use the lump-sum purchase box). The book labels taxes 21%, but 772,597 is 25% of taxable income, and the planner uses the dollars as given.',
+    units: 'ones',
+    plan: { mode: 'manual', growth: 0.12 },
+    years: [
+      { label: '2018', sales: 46298115, cogs: 34536913, opex: 5870865, depreciation: 2074853, interest: 725098, taxes: 772597, dividends: 705000,
+        cash: 524963, receivables: 843094, inventory: 1235161, netFixedAssets: 20381945,
+        payables: 1068356, notesPayable: 2439553, longTermDebt: 6300000, commonStock: 460000, retainedEarnings: 12717254 },
+    ],
+  },
+  {
+    id: 'hoffman',
+    name: 'Hoffman Company (book table 4.6)',
+    note: 'Check against table 4.8: EFN is 47.2 at 20% growth. Internal growth 9.64%, sustainable growth 21.35%. Current assets are entered as other current assets because the book uses one line.',
+    units: 'ones',
+    plan: { mode: 'manual', growth: 0.2 },
+    years: [
+      { label: 'Last year', sales: 500, cogs: 416.5, taxes: 17.5, dividends: 22,
+        otherCurrentAssets: 200, netFixedAssets: 300, longTermDebt: 250, retainedEarnings: 250 },
+    ],
+  },
+  {
+    id: 'rosengarten',
+    name: 'Rosengarten Corporation (book table 4.1)',
+    note: 'Check against table 4.4: EFN is 565 at 25% growth. Set capacity utilization to 70% for 115, or 90% for 340.',
+    units: 'ones',
+    plan: { mode: 'manual', growth: 0.25 },
+    years: [
+      { label: 'Last year', sales: 1000, cogs: 833, taxes: 35, dividends: 44,
+        cash: 160, receivables: 440, inventory: 600, netFixedAssets: 1800,
+        payables: 300, notesPayable: 100, longTermDebt: 800, commonStock: 800, retainedEarnings: 1000 },
+    ],
+  },
+];

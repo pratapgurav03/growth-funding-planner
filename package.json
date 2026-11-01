@@ -1,0 +1,16 @@
+{
+  "name": "growth-funding-planner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Growth funding planner (Ross ch.3-4) with SEC EDGAR company data and a DCF valuation. No dependencies.",
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "serve": "node server.js",
+    "standalone": "node build-standalone.js",
+    "coverage": "node scripts/coverage.mjs",
+    "snapshot": "node scripts/snapshot.mjs",
+    "vercel-build": "node build-standalone.js && node scripts/make-public.mjs",
+    "hosted": "node build-standalone.js && node scripts/make-public.mjs"
+  }
+}
